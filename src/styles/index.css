@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    src: url(./fonts/main/Roboto-Medium.ttf) format("tff");
+  }
+}
+
+@layer components {
+  .header-light {
+    @apply transition w-12 h-12 block rounded-full border-4 border-black;
+  }
+  .font-3d {
+    font-size: 4em;
+    text-shadow: 0 1px 0 theme('colors.pallet-yellow.400'), 0 2px 0 theme('colors.pallet-yellow.400'), 0 3px 0 theme('colors.pallet-yellow.400'), 0 4px 0 theme('colors.pallet-yellow.400'), 0 5px 0 theme('colors.pallet-yellow.400'), 0 6px 0 theme('colors.pallet-yellow.400'), 0 7px 0 theme('colors.pallet-yellow.400'), 0 8px 0 theme('colors.pallet-yellow.400'), 0 8px 0 theme('colors.pallet-yellow.400'), 0 9px 0 theme('colors.pallet-yellow.400')
+  }
+}
