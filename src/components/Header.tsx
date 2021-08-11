@@ -3,7 +3,7 @@ import divider from '../assets/divider.svg'
 
 function Header() {
   return (
-    <header className='min-w-30 bg-red-500 relative'>
+    <header className='w-full bg-red-500 relative'>
       <div className='flex w-full space-x-4 p-6'>
         <span className='header-light bg-blue-400 w-32 h-32 border-gray-200 border-8'></span>
         <span className='header-light bg-red-600'></span>
