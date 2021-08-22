@@ -10,11 +10,17 @@
 }
 
 @layer components {
+  .triangle {
+    clip-path: polygon( 25% 0%, 100% 50%, 25% 100%);
+  }
   .header-light {
     @apply transition w-12 h-12 block rounded-full border-4 border-black;
   }
   .font-3d {
     font-size: 4em;
-    text-shadow: 0 1px 0 theme('colors.pallet-yellow.800'), 0 2px 0 theme('colors.pallet-yellow.800'), 0 3px 0 theme('colors.pallet-yellow.800'), 0 4px 0 theme('colors.pallet-yellow.800'), 0 5px 0 theme('colors.pallet-yellow.800')
+    text-shadow: 0px 1px 0 theme('colors.pallet-yellow.800'), 0 2px 0 theme('colors.pallet-yellow.800'), 0 3px 0 theme('colors.pallet-yellow.800'), 0 4px 0 theme('colors.pallet-yellow.800'), 0 5px 0 theme('colors.pallet-yellow.800');
+  }
+  .box-3d {
+    box-shadow: 1px 1px theme('colors.pallet-yellow.800');
   }
 }

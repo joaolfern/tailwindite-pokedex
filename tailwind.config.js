@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         'pallet-yellow': {
           400: '#E7C23E',
-          800: '#d7ae1b'
+          800: '#82795a'
         }
       }
     },
