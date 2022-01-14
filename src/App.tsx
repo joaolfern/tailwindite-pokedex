@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Header } from './components';
+import Header from './components/Header';
+import StartPage from './pages/StartPage'
+import MainPage from './pages/MainPage/MainPage'
+import hardCacheImage from './utils/hardCacheImage';
+import pikachu from './assets/pikachu.png'
+import { AppLoadingContext } from './contexts/AppLoadingContext';
+import Details from './pages/Details/Details';
 
 function App() {
+  useEffect(() => {
+    hardCacheImage(pikachu)
+  }, [])
+
+  const { isAppLoading } = useContext(AppLoadingContext)
+
   return (
-    <div className="font-roboto h-screen bg-red-500 ">
-      <Header />
-      <Switch>
-        <Route path='/' exact>
-          <h1 className='font-3d'>Tailwindite Pokedex</h1>
+    <div className="font-roboto bg-red-500">
+      <div className='h-screen flex flex-col'>
+        <Header />
+        {isAppLoading && `loading`}
+        <Route path='/pokedex/:name'>
+          <Details />
         </Route>
-      </Switch>
+        <Switch>
+          <Route path='/pokedex'>
+            <MainPage />
+          </Route>
+          <Route path='/'>
+            <StartPage />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }
