@@ -1,6 +1,5 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       transitionProperty: {
@@ -37,15 +36,8 @@ module.exports = {
       }
     },
     animation: {
-      'fadeIn': 'fadeIn 1.5s ease-in',
-      ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite'
+      'fadeIn': 'fadeIn .7s ease-in',
+      ping: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
     }
   },
-  variants: {
-    extend: {
-      backgroundColor: ['active'],
-      outline: ['hover', 'active'],
-    },
-  },
-  plugins: [],
 }

@@ -82,7 +82,13 @@ function MainPage() {
           !!list.next && (
             <>
               <Card loading={true} pokemon={{ name: 'loading', url: '' }} refCard={loadingElementRef} />
-              {Array(15).fill({ name: 'loading...', url: '' }).map(loadingResult => <Card loading={true} pokemon={loadingResult} />)}
+              {Array(15).fill({ name: 'loading...', url: '' }).map((loadingResult, idx) => (
+                <Card
+                  key={`loading-card-${idx}-${list.next}`}
+                  loading={true}
+                  pokemon={loadingResult}
+                />
+              ))}
             </>
           )
         }

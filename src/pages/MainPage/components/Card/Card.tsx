@@ -53,17 +53,15 @@ function MainPageCard({ pokemon, loading, refCard }: IMainPageCard) {
 
   return (
     <div
-      className='bg-pallet-white-400 rounded flex flex-col items-center'
+      className='bg-pallet-white-400 rounded flex flex-col items-center cursor-pointer hover:filter'
       ref={refCard}
       onClick={onCardClick}
     >
-      <div>
-        <Img
-          className='w-16 h-14'
-          src={!loading ? sprite : undefined}
-          placeholder={pikachu}
-        />
-      </div>
+      <Img
+        className='w-16 h-14'
+        src={!loading ? sprite : undefined}
+        placeholder={pikachu}
+      />
       <a
         target='_blank'
       >
